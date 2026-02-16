@@ -6,16 +6,16 @@ Developer letters must always be published in all 6 locales together.
 - Korean: `/letter/kr/`
 - English: `/letter/us/`
 - Japanese: `/letter/jp/`
-- Chinese (Simplified): `/letter/cn/`
-- Chinese (Traditional): `/letter/tw/`
+- Chinese (Simplified): `/letter/zh-hans/`
+- Chinese (Traditional): `/letter/zh-hant/`
 - German: `/letter/de/`
 
 ## Files to update for every new letter
 - `/docs/letter/kr/letters.json`
 - `/docs/letter/us/letters.json`
 - `/docs/letter/jp/letters.json`
-- `/docs/letter/cn/letters.json`
-- `/docs/letter/tw/letters.json`
+- `/docs/letter/zh-hans/letters.json`
+- `/docs/letter/zh-hant/letters.json`
 - `/docs/letter/de/letters.json`
 
 And mirror the same files under `/public/letter/...`.
@@ -34,6 +34,6 @@ And mirror the same files under `/public/letter/...`.
 ```
 
 ## QA checklist
-- Route check: `/letter/kr /letter/us /letter/jp /letter/cn /letter/tw /letter/de`
+- Route check: `/letter/kr /letter/us /letter/jp /letter/zh-hans /letter/zh-hant /letter/de`
 - Latest letter shown first in all locales
 - No missing translation in any locale
