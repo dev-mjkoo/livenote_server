@@ -3,27 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LiveNote - lvnt.my</title>
-    <meta name="description" content="LiveNote 개발자의 편지" />
+    <title>LiveNote - Language</title>
+    <meta name="description" content="Choose your language" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="page">
       <header class="hero">
         <p class="eyebrow">LIVE NOTE</p>
-        <h1>개발자의 편지</h1>
-        <p class="lead">LiveNote를 만들며 바뀐 점과 앞으로의 방향을 쉽게 전해드릴게요.</p>
+        <h1>언어를 선택하세요</h1>
+        <p class="lead">Choose your language for Developer Letters.</p>
       </header>
 
-      <section class="card updates-card" aria-labelledby="letters-title">
-        <div class="section-head">
-          <h2 id="letters-title">최근 편지</h2>
-          <button id="refresh-btn" type="button" class="ghost">새로고침</button>
-        </div>
-        <div id="letters-list" class="letters" aria-live="polite"></div>
+      <section class="lang-home" aria-label="Language menu">
+        <a href="/kr/">한국어</a>
+        <a href="/us/">English</a>
+        <a href="/jp/">日本語</a>
+        <a href="/cn/">简体中文</a>
+        <a href="/tw/">繁體中文</a>
+        <a href="/de/">Deutsch</a>
       </section>
     </main>
-
-    <script src="./app.js"></script>
   </body>
 </html>

@@ -1,5 +1,16 @@
+const i18n = window.LIVE_NOTE_I18N || {};
+
 const lettersList = document.getElementById("letters-list");
 const refreshButton = document.getElementById("refresh-btn");
+const homeLink = document.getElementById("home-link");
+
+if (refreshButton) {
+  refreshButton.textContent = i18n.refresh || "Refresh";
+}
+
+if (homeLink) {
+  homeLink.textContent = i18n.home || "Language";
+}
 
 function escapeHtml(value) {
   return String(value || "")
@@ -11,8 +22,10 @@ function escapeHtml(value) {
 }
 
 function renderLetters(items) {
+  if (!lettersList) return;
+
   if (!items || items.length === 0) {
-    lettersList.innerHTML = '<div class="letter-empty">아직 등록된 편지가 없습니다.</div>';
+    lettersList.innerHTML = `<div class="letter-empty">${escapeHtml(i18n.empty || "No letters yet.")}</div>`;
     return;
   }
 
@@ -33,7 +46,7 @@ function renderLetters(items) {
             <span class="letter-chevron">⌄</span>
           </button>
           <div id="${panelId}" class="letter-panel" ${open ? "" : "hidden"}>
-            ${bodyHtml || '<p class="letter-empty">본문이 비어 있습니다.</p>'}
+            ${bodyHtml || `<p class="letter-empty">${escapeHtml(i18n.emptyBody || "Empty content")}</p>`}
           </div>
         </article>
       `;
@@ -54,7 +67,8 @@ function renderLetters(items) {
 }
 
 async function loadLetters() {
-  lettersList.innerHTML = '<div class="letter-empty">불러오는 중...</div>';
+  if (!lettersList) return;
+  lettersList.innerHTML = `<div class="letter-empty">${escapeHtml(i18n.loading || "Loading...")}</div>`;
 
   try {
     const response = await fetch("./letters.json", { cache: "no-store" });
@@ -67,9 +81,12 @@ async function loadLetters() {
 
     renderLetters(letters);
   } catch (_error) {
-    lettersList.innerHTML = '<div class="letter-empty">편지를 불러오지 못했습니다.</div>';
+    lettersList.innerHTML = `<div class="letter-empty">${escapeHtml(i18n.error || "Could not load letters.")}</div>`;
   }
 }
 
-refreshButton.addEventListener("click", loadLetters);
+if (refreshButton) {
+  refreshButton.addEventListener("click", loadLetters);
+}
+
 loadLetters();

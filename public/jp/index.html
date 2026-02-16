@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveNote - 開発者レター</title>
+    <meta name="description" content="LiveNote 開発者レター" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">LIVE NOTE</p>
+        <h1>開発者レター</h1>
+        <p class="lead">LiveNoteの変更点と今後の方向性をわかりやすくお届けします。</p>
+        <nav class="locale-nav" aria-label="言語">
+          <a class="locale-link" href="/kr/">KR</a>
+          <a class="locale-link" href="/us/">US</a>
+          <a class="locale-link is-active" href="/jp/">JP</a>
+          <a class="locale-link" href="/cn/">CN</a>
+          <a class="locale-link" href="/tw/">TW</a>
+          <a class="locale-link" href="/de/">DE</a>
+        </nav>
+      </header>
+
+      <section class="card updates-card" aria-labelledby="letters-title">
+        <div class="section-head">
+          <h2 id="letters-title">最新レター</h2>
+          <button id="refresh-btn" type="button" class="ghost"></button>
+        </div>
+        <div id="letters-list" class="letters" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script>
+      window.LIVE_NOTE_I18N = {
+        refresh: "更新",
+        home: "言語",
+        loading: "読み込み中...",
+        empty: "まだレターはありません。",
+        emptyBody: "本文がありません。",
+        error: "レターを読み込めませんでした。"
+      };
+    </script>
+    <script src="../app.js"></script>
+  </body>
+</html>

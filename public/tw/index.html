@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveNote - 開發者來信</title>
+    <meta name="description" content="LiveNote 開發者來信" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">LIVE NOTE</p>
+        <h1>開發者來信</h1>
+        <p class="lead">我們會用簡潔的方式分享 LiveNote 的更新與接下來的方向。</p>
+        <nav class="locale-nav" aria-label="語言">
+          <a class="locale-link" href="/kr/">KR</a>
+          <a class="locale-link" href="/us/">US</a>
+          <a class="locale-link" href="/jp/">JP</a>
+          <a class="locale-link" href="/cn/">CN</a>
+          <a class="locale-link is-active" href="/tw/">TW</a>
+          <a class="locale-link" href="/de/">DE</a>
+        </nav>
+      </header>
+
+      <section class="card updates-card" aria-labelledby="letters-title">
+        <div class="section-head">
+          <h2 id="letters-title">最新來信</h2>
+          <button id="refresh-btn" type="button" class="ghost"></button>
+        </div>
+        <div id="letters-list" class="letters" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script>
+      window.LIVE_NOTE_I18N = {
+        refresh: "重新整理",
+        home: "語言",
+        loading: "載入中...",
+        empty: "目前沒有來信。",
+        emptyBody: "內容為空。",
+        error: "無法載入來信。"
+      };
+    </script>
+    <script src="../app.js"></script>
+  </body>
+</html>

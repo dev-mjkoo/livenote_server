@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveNote - 개발자의 편지</title>
+    <meta name="description" content="LiveNote 개발자의 편지" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">LIVE NOTE</p>
+        <h1>개발자의 편지</h1>
+        <p class="lead">LiveNote를 만들며 바뀐 점과 앞으로의 방향을 쉽게 전해드릴게요.</p>
+        <nav class="locale-nav" aria-label="언어 선택">
+          <a class="locale-link is-active" href="/kr/">KR</a>
+          <a class="locale-link" href="/us/">US</a>
+          <a class="locale-link" href="/jp/">JP</a>
+          <a class="locale-link" href="/cn/">CN</a>
+          <a class="locale-link" href="/tw/">TW</a>
+          <a class="locale-link" href="/de/">DE</a>
+        </nav>
+      </header>
+
+      <section class="card updates-card" aria-labelledby="letters-title">
+        <div class="section-head">
+          <h2 id="letters-title">최근 편지</h2>
+          <button id="refresh-btn" type="button" class="ghost"></button>
+        </div>
+        <div id="letters-list" class="letters" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script>
+      window.LIVE_NOTE_I18N = {
+        refresh: "새로고침",
+        home: "언어 선택",
+        loading: "불러오는 중...",
+        empty: "아직 등록된 편지가 없습니다.",
+        emptyBody: "본문이 비어 있습니다.",
+        error: "편지를 불러오지 못했습니다."
+      };
+    </script>
+    <script src="../app.js"></script>
+  </body>
+</html>

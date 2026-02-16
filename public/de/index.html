@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveNote - Entwicklerbriefe</title>
+    <meta name="description" content="LiveNote Entwicklerbriefe" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">LIVE NOTE</p>
+        <h1>Briefe vom Entwickler</h1>
+        <p class="lead">Wir teilen klar und kurz, was sich in LiveNote geändert hat und was als Nächstes kommt.</p>
+        <nav class="locale-nav" aria-label="Sprache">
+          <a class="locale-link" href="/kr/">KR</a>
+          <a class="locale-link" href="/us/">US</a>
+          <a class="locale-link" href="/jp/">JP</a>
+          <a class="locale-link" href="/cn/">CN</a>
+          <a class="locale-link" href="/tw/">TW</a>
+          <a class="locale-link is-active" href="/de/">DE</a>
+        </nav>
+      </header>
+
+      <section class="card updates-card" aria-labelledby="letters-title">
+        <div class="section-head">
+          <h2 id="letters-title">Neueste Briefe</h2>
+          <button id="refresh-btn" type="button" class="ghost"></button>
+        </div>
+        <div id="letters-list" class="letters" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script>
+      window.LIVE_NOTE_I18N = {
+        refresh: "Aktualisieren",
+        home: "Sprache",
+        loading: "Wird geladen...",
+        empty: "Noch keine Briefe.",
+        emptyBody: "Kein Inhalt.",
+        error: "Briefe konnten nicht geladen werden."
+      };
+    </script>
+    <script src="../app.js"></script>
+  </body>
+</html>

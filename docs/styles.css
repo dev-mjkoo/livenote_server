@@ -63,10 +63,34 @@ h2 {
   color: var(--white);
 }
 
-.lead,
-.muted {
+.lead {
   color: var(--ink-soft);
   margin: 0;
+}
+
+.locale-nav {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.locale-link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 12px;
+  border: 1px solid rgba(16, 18, 21, 0.16);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.locale-link.is-active {
+  border-color: rgba(52, 178, 51, 0.6);
+  background: rgba(52, 178, 51, 0.15);
+  color: #0a5512;
 }
 
 .updates-card {
@@ -162,6 +186,27 @@ h2 {
 
 .ghost:hover {
   background: rgba(52, 178, 51, 0.28);
+}
+
+.lang-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.lang-home a {
+  display: block;
+  background: var(--panel);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(16, 18, 21, 0.12);
+  font-weight: 700;
+}
+
+.lang-home a:hover {
+  border-color: rgba(52, 178, 51, 0.5);
 }
 
 @media (max-width: 640px) {
