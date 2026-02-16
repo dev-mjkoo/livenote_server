@@ -127,6 +127,27 @@ h1 {
   line-height: 1.56;
 }
 
+.contact {
+  margin: 14px 0 0;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #2f3b45;
+  font-size: 0.93rem;
+  font-weight: 600;
+}
+
+.contact a {
+  color: #0f7f19;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(15, 127, 25, 0.38);
+}
+
+.contact a:hover {
+  color: #0c6a15;
+  border-bottom-color: rgba(12, 106, 21, 0.6);
+}
+
 .updates-card {
   background: linear-gradient(170deg, rgba(26, 33, 42, 0.92), rgba(15, 20, 29, 0.95));
   border-color: var(--dark-line);
@@ -136,7 +157,7 @@ h1 {
 .section-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 14px;
   margin-bottom: 14px;
   padding-bottom: 12px;
