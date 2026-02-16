@@ -1,9 +1,24 @@
 # LiveNote Domain Homepage (`lvnt.my`)
 
-This project runs a simple homepage with:
-- Update feed (`GET /api/updates`)
-- Question form (`POST /api/messages`)
-- Static landing page (`/`)
+This repository now supports two modes:
+- `docs/` GitHub Pages static site (recommended for update/news page)
+- Node/Express web service (optional; existing files kept)
+
+## GitHub Pages (recommended)
+
+1. GitHub repo `Settings` -> `Pages`
+2. `Build and deployment` -> `Deploy from a branch`
+3. Branch: `main`, Folder: `/docs`
+4. Save
+
+After deployment:
+- Site URL: `https://dev-mjkoo.github.io/livenote_server/`
+- Custom domain: set `lvnt.my` in Pages settings
+- `docs/CNAME` already includes `lvnt.my`
+
+Update content files:
+- `docs/updates.json` (공지 목록)
+- `docs/app.js` -> `QUESTION_FORM_URL` (문의 폼 URL)
 
 ## 1) Run locally
 
