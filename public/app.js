@@ -2,14 +2,9 @@ const i18n = window.LIVE_NOTE_I18N || {};
 
 const lettersList = document.getElementById("letters-list");
 const refreshButton = document.getElementById("refresh-btn");
-const homeLink = document.getElementById("home-link");
 
 if (refreshButton) {
   refreshButton.textContent = i18n.refresh || "Refresh";
-}
-
-if (homeLink) {
-  homeLink.textContent = i18n.home || "Language";
 }
 
 function escapeHtml(value) {
