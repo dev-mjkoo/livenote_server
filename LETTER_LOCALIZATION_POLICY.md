@@ -3,22 +3,22 @@
 Developer letters must always be published in all 6 locales together.
 
 ## Locales and routes
-- Korean: `/kr/`
-- English: `/us/`
-- Japanese: `/jp/`
-- Chinese (Simplified): `/cn/`
-- Chinese (Traditional): `/tw/`
-- German: `/de/`
+- Korean: `/letter/kr/`
+- English: `/letter/us/`
+- Japanese: `/letter/jp/`
+- Chinese (Simplified): `/letter/cn/`
+- Chinese (Traditional): `/letter/tw/`
+- German: `/letter/de/`
 
 ## Files to update for every new letter
-- `/docs/kr/letters.json`
-- `/docs/us/letters.json`
-- `/docs/jp/letters.json`
-- `/docs/cn/letters.json`
-- `/docs/tw/letters.json`
-- `/docs/de/letters.json`
+- `/docs/letter/kr/letters.json`
+- `/docs/letter/us/letters.json`
+- `/docs/letter/jp/letters.json`
+- `/docs/letter/cn/letters.json`
+- `/docs/letter/tw/letters.json`
+- `/docs/letter/de/letters.json`
 
-And mirror the same files under `/public/...`.
+And mirror the same files under `/public/letter/...`.
 
 ## Ordering rule
 - Insert new letter object at the top of each `letters.json` array.
@@ -34,6 +34,6 @@ And mirror the same files under `/public/...`.
 ```
 
 ## QA checklist
-- Route check: `/kr /us /jp /cn /tw /de`
+- Route check: `/letter/kr /letter/us /letter/jp /letter/cn /letter/tw /letter/de`
 - Latest letter shown first in all locales
 - No missing translation in any locale
