@@ -1,9 +1,5 @@
 const updatesList = document.getElementById("updates-list");
 const refreshButton = document.getElementById("refresh-btn");
-const questionLink = document.getElementById("question-link");
-
-// TODO: Replace with your real question form URL (Google Form, Tally, Typeform, etc.)
-const QUESTION_FORM_URL = "https://forms.gle/";
 
 async function loadUpdates() {
   updatesList.innerHTML = "<li>불러오는 중...</li>";
@@ -29,6 +25,5 @@ async function loadUpdates() {
   }
 }
 
-questionLink.href = QUESTION_FORM_URL;
 refreshButton.addEventListener("click", loadUpdates);
 loadUpdates();
