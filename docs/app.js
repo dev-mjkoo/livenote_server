@@ -28,7 +28,7 @@ function renderLetters(items) {
           <button class="letter-trigger" type="button" aria-expanded="${open}" aria-controls="${panelId}">
             <span>
               <div class="letter-title">${escapeHtml(item.title)}</div>
-              <div class="letter-meta">${escapeHtml(item.date)} · ${escapeHtml(item.tag || "개발자의 편지")}</div>
+              <div class="letter-meta">${escapeHtml(item.date)}</div>
             </span>
             <span class="letter-chevron">⌄</span>
           </button>
