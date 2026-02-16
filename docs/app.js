@@ -32,7 +32,7 @@ function renderLetters(items) {
       const bodyHtml = body.map((line) => `<p>${escapeHtml(line)}</p>`).join("");
 
       return `
-        <article class="letter-item" data-open="${open}">
+        <article class="letter-item" data-open="${open}" style="--idx:${index}">
           <button class="letter-trigger" type="button" aria-expanded="${open}" aria-controls="${panelId}">
             <span>
               <div class="letter-title">${escapeHtml(item.title)}</div>
