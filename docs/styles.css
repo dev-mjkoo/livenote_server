@@ -97,29 +97,87 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.updates-card .muted {
+  color: #bcc4ce;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.updates-card code {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.letters {
   display: grid;
   gap: 10px;
 }
 
-.list li {
-  color: #dbe0e7;
-  line-height: 1.5;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.letter-item {
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
-  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
 }
 
-.list li strong {
-  color: #9df59d;
+.letter-trigger {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #edf2f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.letter-title {
+  font-size: 1rem;
   font-weight: 700;
+}
+
+.letter-meta {
+  color: #9df59d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.letter-chevron {
+  color: #9df59d;
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+
+.letter-item[data-open="true"] .letter-chevron {
+  transform: rotate(180deg);
+}
+
+.letter-panel {
+  padding: 0 14px 14px;
+  color: #dbe0e7;
+}
+
+.letter-panel[hidden] {
+  display: none;
+}
+
+.letter-panel p {
+  margin: 0 0 10px;
+  line-height: 1.55;
+}
+
+.letter-empty {
+  color: #aab2be;
+  font-size: 0.9rem;
 }
 
 .ghost {
@@ -151,5 +209,9 @@ h2 {
   .section-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .letter-title {
+    font-size: 0.95rem;
   }
 }

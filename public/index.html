@@ -1,55 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LiveNote - lvnt.my</title>
-    <meta
-      name="description"
-      content="Ask questions, read updates, and connect with the LiveNote team."
-    />
-    <link rel="stylesheet" href="/styles.css" />
+    <meta name="description" content="LiveNote 개발자의 편지" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="page">
       <header class="hero">
-        <p class="eyebrow">lvnt.my</p>
-        <h1>LiveNote Hub</h1>
-        <p class="lead">
-          Ask questions, follow updates, and stay connected with the LiveNote
-          team.
-        </p>
+        <p class="eyebrow">LIVE NOTE</p>
+        <h1>개발자의 편지</h1>
+        <p class="lead">LiveNote를 만들며 바뀐 점과 앞으로의 방향을 쉽게 전해드릴게요.</p>
+        <div class="hero-chip-row">
+          <span class="chip">lvnt.my</span>
+          <span class="chip">From Developer</span>
+          <span class="chip">#34B233</span>
+        </div>
       </header>
 
-      <section class="card" aria-labelledby="updates-title">
-        <h2 id="updates-title">Latest Updates</h2>
-        <ul id="updates-list" class="list"></ul>
-      </section>
-
-      <section class="card" aria-labelledby="ask-title">
-        <h2 id="ask-title">Ask a Question</h2>
-        <form id="ask-form" class="form">
-          <label>
-            Name (optional)
-            <input id="name-input" type="text" maxlength="60" placeholder="your name" />
-          </label>
-
-          <label>
-            Message
-            <textarea
-              id="message-input"
-              maxlength="1000"
-              required
-              placeholder="Ask anything about LiveNote..."
-            ></textarea>
-          </label>
-
-          <button type="submit">Send</button>
-          <p id="form-status" class="status" role="status" aria-live="polite"></p>
-        </form>
+      <section class="card updates-card" aria-labelledby="letters-title">
+        <div class="section-head">
+          <h2 id="letters-title">최근 편지</h2>
+          <button id="refresh-btn" type="button" class="ghost">새로고침</button>
+        </div>
+        <p class="muted">새 편지는 <code>letters.json</code> 맨 위에 추가하면 바로 반영됩니다.</p>
+        <div id="letters-list" class="letters" aria-live="polite"></div>
       </section>
     </main>
 
-    <script src="/app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
