@@ -1,0 +1,14 @@
+{
+  "name": "livenote-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple homepage for lvnt.my with updates and Q&A",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
