@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveNote Terms</title>
+    <meta name="description" content="LiveNote legal page language selector" />
+    <link rel="stylesheet" href="/legal.css" />
+  </head>
+  <body>
+    <main class="legal-page">
+      <header class="legal-hero">
+        <p class="eyebrow">LiveNote Legal</p>
+        <h1>Terms of Service</h1>
+        <p class="subtitle">Redirecting to the best language match. If it does not open correctly, choose your language below.</p>
+        <p class="index-note">Terms language pages</p>
+        <div class="redirect-links">
+          <a href="/terms/kr/">한국어</a><a href="/terms/us/">English</a><a href="/terms/jp/">日本語</a><a href="/terms/zh-hans/">简体中文</a><a href="/terms/zh-hant/">繁體中文</a><a href="/terms/de/">Deutsch</a>
+        </div>
+      </header>
+    </main>
+
+    <script>
+      (function () {
+        const input = String(navigator.language || '').toLowerCase();
+        let locale = 'us';
+
+        if (input.startsWith('ko')) locale = 'kr';
+        else if (input.startsWith('ja')) locale = 'jp';
+        else if (input.startsWith('de')) locale = 'de';
+        else if (input.startsWith('zh-hant') || input.startsWith('zh-tw') || input.startsWith('zh-hk') || input.startsWith('zh-mo')) locale = 'zh-hant';
+        else if (input.startsWith('zh')) locale = 'zh-hans';
+
+        window.location.replace('/terms/' + locale + '/');
+      })();
+    </script>
+  </body>
+</html>
