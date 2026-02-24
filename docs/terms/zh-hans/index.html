@@ -10,7 +10,12 @@
   <body>
     <main class="legal-page">
       <header class="legal-hero">
-        <nav class="legal-nav" aria-label="Legal navigation">
+        <nav class="legal-nav" aria-label="Legal navigation" data-open="false">
+          <button class="nav-toggle" type="button" aria-expanded="false">
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+            <span class="nav-toggle-label">菜单</span>
+          </button>
+          <div class="nav-panel">
           <section class="nav-menu-block">
             <p class="nav-menu-label">Legal</p>
             <div class="nav-links nav-links-legal">
@@ -24,6 +29,8 @@
               <a class="" href="/terms/kr/">한국어</a><a class="" href="/terms/us/">English</a><a class="" href="/terms/jp/">日本語</a><a class="active" href="/terms/zh-hans/">简体中文</a><a class="" href="/terms/zh-hant/">繁體中文</a><a class="" href="/terms/de/">Deutsch</a>
             </div>
           </section>
+        
+          </div>
         </nav>
 
         <p class="eyebrow">LiveNote Legal</p>
@@ -46,5 +53,6 @@
 <section class="legal-section"><h2>11. 联系方式</h2><p>条款咨询：help@lvnt.my</p></section>
       </article>
     </main>
+      <script src="/legal-menu.js"></script>
   </body>
 </html>
