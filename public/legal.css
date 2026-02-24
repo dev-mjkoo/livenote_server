@@ -48,7 +48,6 @@ body {
 .legal-hero {
   position: relative;
   padding: 24px;
-  padding-right: 112px;
 }
 
 .eyebrow {
@@ -103,124 +102,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-}
-
-.legal-nav {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.nav-toggle {
-  border: 1px solid rgba(15, 114, 49, 0.3);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.85);
-  color: #0f7231;
-  padding: 8px 12px;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 680;
-}
-
-.nav-toggle:hover {
-  filter: brightness(0.97);
-}
-
-.nav-toggle:focus-visible {
-  outline: 3px solid rgba(31, 156, 74, 0.35);
-  outline-offset: 2px;
-}
-
-.nav-toggle-icon {
-  position: relative;
-  width: 14px;
-  height: 2px;
-  border-radius: 999px;
-  background: currentColor;
-}
-
-.nav-toggle-icon::before,
-.nav-toggle-icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 14px;
-  height: 2px;
-  border-radius: 999px;
-  background: currentColor;
-}
-
-.nav-toggle-icon::before {
-  top: -5px;
-}
-
-.nav-toggle-icon::after {
-  top: 5px;
-}
-
-.nav-toggle-label {
-  font-size: 0.88rem;
-}
-
-.nav-panel {
-  display: none;
-  margin-top: 8px;
-  width: min(82vw, 340px);
-}
-
-.legal-nav[data-open="true"] .nav-panel {
-  display: grid;
-  gap: 8px;
-}
-
-.nav-menu-block {
-  border: 1px solid rgba(15, 114, 49, 0.16);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.76);
-  padding: 8px 10px;
-}
-
-.nav-menu-label {
-  margin: 0 0 4px;
-  color: #2f4b3a;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-end;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #0f7231;
-  font-size: 0.9rem;
-  font-weight: 620;
-  line-height: 1.35;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.nav-links a.active {
-  color: #fff;
-  background: #149243;
-  border-radius: 999px;
-  padding: 1px 8px;
 }
 
 .faq-item + .faq-item {
@@ -303,41 +184,6 @@ ul {
   .legal-card {
     padding: 18px;
     border-radius: 18px;
-  }
-
-  .legal-hero {
-    padding-right: 18px;
-  }
-
-  .legal-nav {
-    top: 12px;
-    right: 12px;
-  }
-
-  .nav-panel {
-    width: min(92vw, 340px);
-  }
-
-  .nav-toggle {
-    padding: 8px 10px;
-  }
-
-  .nav-toggle-label {
-    font-size: 0.82rem;
-  }
-
-  .legal-nav[data-open="true"] {
-    z-index: 4;
-  }
-
-  .legal-nav[data-open="true"] .nav-panel {
-    max-height: min(60vh, 360px);
-    overflow-y: auto;
-  }
-
-  .legal-nav .nav-links {
-    margin: 0 0 12px;
-    justify-content: flex-start;
   }
 
   p,
