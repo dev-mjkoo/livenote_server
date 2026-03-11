@@ -3,17 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LiveNote - Developer Letters</title>
-    <meta name="description" content="LiveNote Developer Letters" />
+    <title>LiveNote</title>
+    <meta name="description" content="LiveNote: 잠금화면에 기록하고, 잊지 않게" />
+    <meta name="theme-color" content="#050505" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <main class="page">
-      <header class="hero">
-        <p class="eyebrow">LIVE NOTE</p>
-        <h1>Developer Letters</h1>
-        <p class="lead">언어별 페이지는 앱에서 전달되는 URL로 바로 진입합니다.</p>
-      </header>
+  <body class="landing-body">
+    <main class="page landing-page">
+      <section class="landing-hero" aria-labelledby="landing-title">
+        <div class="landing-copy">
+          <p class="landing-kicker">LOCK SCREEN NOTE APP</p>
+
+          <div class="brand-lockup" aria-label="LiveNote">
+            <span class="brand-line">
+              LIVE
+              <span class="brand-dot" aria-hidden="true"></span>
+            </span>
+            <span class="brand-line">NOTE</span>
+          </div>
+
+          <h1 id="landing-title" class="landing-title">
+            잠금화면에 기록하고,
+            <br />
+            잊지 않게
+          </h1>
+
+          <p class="landing-lead">
+            해야 할 일, 바로 열어야 할 링크, 스쳐 지나가기 쉬운 생각까지.
+            LiveNote는 가장 먼저 보이는 자리에서 기억을 붙잡아 둡니다.
+          </p>
+
+          <div class="landing-actions">
+            <a class="landing-button landing-button-primary" href="./support/kr/">지원 보기</a>
+            <a class="landing-button landing-button-secondary" href="mailto:help@lvnt.my">문의하기</a>
+          </div>
+
+          <ul class="landing-points" aria-label="LiveNote highlights">
+            <li>잠금화면에서 바로 확인</li>
+            <li>메모와 링크를 빠르게 저장</li>
+            <li>기억해야 할 것만 또렷하게</li>
+          </ul>
+        </div>
+
+        <div class="landing-visual" aria-hidden="true">
+          <div class="landing-glow landing-glow-top"></div>
+          <div class="landing-glow landing-glow-bottom"></div>
+
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-status">
+                <span>9:41</span>
+                <span>LIVE NOTE</span>
+              </div>
+
+              <div class="phone-widget">
+                <p class="phone-label">Today</p>
+
+                <div class="phone-note phone-note-active">
+                  <span class="phone-note-time">09:00</span>
+                  <strong>회의 전에 꼭 확인할 링크</strong>
+                  <p>지원 페이지와 메모를 잠금화면에서 바로 열기</p>
+                </div>
+
+                <div class="phone-note">
+                  <span class="phone-note-time">11:30</span>
+                  <strong>놓치면 안 되는 한 줄</strong>
+                  <p>기억해야 할 건 가장 앞에 남겨두기</p>
+                </div>
+
+                <div class="phone-chip">Write now. Remember later.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card">
+            <p class="floating-label">Quick Capture</p>
+            <strong>한 줄 메모부터</strong>
+            <span>잊기 전에, 잠금화면에 먼저</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-grid" aria-label="LiveNote details">
+        <article class="landing-card landing-card-story">
+          <p class="landing-card-kicker">WHY IT STICKS</p>
+          <h2 class="landing-card-title">앱을 열기 전에도, 기억은 이미 앞에 있어야 하니까.</h2>
+          <p class="landing-card-text">
+            LiveNote는 메모를 깊은 메뉴 안에 숨기지 않습니다. 가장 자주 보는 화면에
+            기록을 올려 두고, 중요한 순간에 다시 떠오르게 만듭니다.
+          </p>
+        </article>
+
+        <nav class="landing-card landing-card-links" aria-label="Quick links">
+          <p class="landing-card-kicker">OPEN</p>
+          <a href="./letter/kr/">개발자 레터</a>
+          <a href="./support/kr/">지원</a>
+          <a href="./privacy/kr/">개인정보처리방침</a>
+          <a href="./terms/kr/">이용약관</a>
+        </nav>
+      </section>
     </main>
   </body>
 </html>
