@@ -439,6 +439,41 @@ body.updates-body::after {
   align-items: start;
 }
 
+.release-shot {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  width: min(860px, 100%);
+  justify-self: center;
+  border-radius: 38px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(15, 16, 15, 0.92), rgba(8, 8, 8, 0.96));
+  box-shadow:
+    0 36px 90px rgba(0, 0, 0, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.release-shot.is-compact {
+  width: min(760px, 100%);
+}
+
+.release-shot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.release-shot-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .detail-main,
 .detail-aside-card {
   display: grid;
@@ -794,6 +829,12 @@ body.updates-body::after {
   .lockscreen-shell.is-compact {
     min-height: 0;
     padding: 8px 0 30px;
+  }
+
+  .release-shot,
+  .release-shot.is-compact {
+    width: 100%;
+    border-radius: 28px;
   }
 
   .lockscreen-panel {

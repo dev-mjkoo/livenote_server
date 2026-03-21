@@ -102,6 +102,19 @@ function renderShowcaseEntry(entry) {
 }
 
 function renderShowcase(release, compact) {
+  if (release.image) {
+    return `
+      <figure class="release-shot${compact ? " is-compact" : ""}">
+        <img
+          class="release-shot-image"
+          src="${escapeHtml(release.image)}"
+          alt="${escapeHtml(release.imageAlt || release.title || "Release screenshot")}"
+          loading="lazy"
+        />
+      </figure>
+    `;
+  }
+
   const mockup = release.mockup || {};
   const entries = Array.isArray(mockup.entries) ? mockup.entries : [];
   const memoLines = String(mockup.memo || "")

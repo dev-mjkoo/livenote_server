@@ -8,6 +8,8 @@
     "headline": "캘린더 일정과 LiveNote 메모를 같은 화면 리듬으로 정리했습니다.",
     "summary": "오늘과 내일 일정, 선택한 이벤트 정보, LiveNote 메모를 한 카드 흐름 안에서 더 빠르게 확인할 수 있도록 다듬었습니다.",
     "description": "잠금화면을 여는 순간 바로 훑을 수 있도록 왼쪽에는 일정 흐름, 오른쪽에는 LiveNote 메모를 배치한 업데이트입니다.",
+    "image": "/updates-assets/1.2.2.png",
+    "imageAlt": "LiveNote 1.2.2 lock screen update screenshot",
     "tags": ["Lock Screen", "Calendar", "LiveNote"],
     "highlights": [
       "Today / Tomorrow 구분으로 오늘과 내일 일정을 더 빠르게 스캔할 수 있어요.",
