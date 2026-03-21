@@ -1,10 +1,88 @@
 [
   {
-    "date": "2026-02-16",
-    "text": "GitHub Pages 기반 공식 홈페이지를 오픈했습니다."
-  },
-  {
-    "date": "2026-02-16",
-    "text": "업데이트 공지 페이지와 문의 버튼을 추가했습니다."
+    "version": "1.2.2",
+    "date": "2026-03-21",
+    "status": "Latest",
+    "eyebrow": "Fresh update",
+    "title": "잠금화면에서 일정과 메모를 한 번에",
+    "headline": "캘린더 일정과 LiveNote 메모를 같은 화면 리듬으로 정리했습니다.",
+    "summary": "오늘과 내일 일정, 선택한 이벤트 정보, LiveNote 메모를 한 카드 흐름 안에서 더 빠르게 확인할 수 있도록 다듬었습니다.",
+    "description": "잠금화면을 여는 순간 바로 훑을 수 있도록 왼쪽에는 일정 흐름, 오른쪽에는 LiveNote 메모를 배치한 업데이트입니다.",
+    "tags": ["Lock Screen", "Calendar", "LiveNote"],
+    "highlights": [
+      "Today / Tomorrow 구분으로 오늘과 내일 일정을 더 빠르게 스캔할 수 있어요.",
+      "선택한 일정은 시간과 참석자 맥락까지 함께 보여줘서 바로 이해할 수 있어요.",
+      "오른쪽 패널에서 LiveNote 메모를 이어서 확인할 수 있어 일정과 할 일을 한 번에 봐요."
+    ],
+    "sections": [
+      {
+        "title": "이번에 추가된 흐름",
+        "items": [
+          "잠금화면 카드 안에서 일정 목록과 LiveNote 메모를 나란히 배치했습니다.",
+          "오늘 일정과 내일 일정을 끊어 보여줘서 하루 흐름을 더 빠르게 훑을 수 있습니다.",
+          "선택된 일정은 시간 정보와 함께 강조해 지금 보고 있는 이벤트를 놓치지 않게 했습니다."
+        ]
+      },
+      {
+        "title": "화면에서 달라진 점",
+        "items": [
+          "날짜 배지와 선택 상태를 더 뚜렷하게 보여주는 카드 스타일을 적용했습니다.",
+          "오른쪽 메모 영역은 더 크게 읽히도록 여백과 줄 간격을 넓혔습니다.",
+          "잠금화면에서도 정보가 섞여 보이지 않도록 구획을 단순하게 정리했습니다."
+        ]
+      },
+      {
+        "title": "이럴 때 더 편해요",
+        "items": [
+          "외출 전에 오늘 일정과 해야 할 일을 한 번에 확인하고 싶을 때",
+          "회의나 약속 전에 시간과 참석자를 빠르게 다시 보고 싶을 때",
+          "앱을 깊게 열지 않고도 지금 중요한 메모를 바로 확인하고 싶을 때"
+        ]
+      }
+    ],
+    "notes": [
+      "일정과 메모가 같은 시선 흐름 안에 있어 잠금화면에서 더 자연스럽게 읽힙니다.",
+      "선택된 일정이 명확하게 드러나서 지금 집중할 이벤트를 바로 파악할 수 있습니다.",
+      "앞으로 버전이 늘어나도 같은 구조로 업데이트 아카이브를 계속 쌓을 수 있습니다."
+    ],
+    "mockup": {
+      "brand": "LIVE NOTE",
+      "memo": "Buy groceries, Send email, Call mom, Take notes, Check flight",
+      "entries": [
+        {
+          "type": "heading",
+          "label": "Today"
+        },
+        {
+          "type": "item",
+          "date": "21",
+          "label": "Trip (Wife)",
+          "tone": "warm"
+        },
+        {
+          "type": "item",
+          "label": "Brunch (Mike, Emma)",
+          "time": "12:00 PM-1:00 PM",
+          "selected": true
+        },
+        {
+          "type": "item",
+          "date": "21",
+          "label": "Events (2)"
+        },
+        {
+          "type": "heading",
+          "label": "Tomorrow",
+          "muted": true
+        },
+        {
+          "type": "item",
+          "date": "22",
+          "label": "Trip (Wife)",
+          "tone": "warm",
+          "muted": true
+        }
+      ]
+    }
   }
 ]

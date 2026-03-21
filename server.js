@@ -5,11 +5,11 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_DIR = path.join(__dirname, "data");
+const PUBLIC_DIR = path.join(__dirname, "public");
 const MESSAGES_FILE = path.join(DATA_DIR, "messages.json");
 const UPDATES_FILE = path.join(DATA_DIR, "updates.json");
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
 
 function readJson(filePath, fallback) {
   try {
@@ -61,8 +61,30 @@ app.post("/api/messages", (req, res) => {
   return res.status(201).json({ ok: true, message: newMessage });
 });
 
+app.get(["/updates", "/updates/"], (_req, res) => {
+  res.sendFile(path.join(PUBLIC_DIR, "updates", "index.html"));
+});
+
+app.get(["/updates/:version", "/updates/:version/"], (req, res) => {
+  const version = String(req.params.version || "");
+
+  if (!/^[0-9A-Za-z._-]+$/.test(version)) {
+    return res.status(404).send("Not found");
+  }
+
+  const detailFile = path.join(PUBLIC_DIR, "updates", version, "index.html");
+
+  if (!fs.existsSync(detailFile)) {
+    return res.status(404).send("Not found");
+  }
+
+  return res.sendFile(detailFile);
+});
+
+app.use(express.static(PUBLIC_DIR));
+
 app.get("*", (_req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(PUBLIC_DIR, "index.html"));
 });
 
 app.listen(PORT, () => {
