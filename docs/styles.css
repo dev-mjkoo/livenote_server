@@ -411,8 +411,8 @@ body.landing-body::after {
 
 .landing-kicker,
 .landing-card-kicker,
-.phone-label,
-.floating-label {
+.memory-panel-kicker,
+.memory-float-label {
   margin: 0;
   font-size: 0.78rem;
   font-weight: 800;
@@ -583,147 +583,168 @@ body.landing-body::after {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 72%);
 }
 
-.phone-frame {
+.memory-stage {
   position: relative;
-  width: min(360px, 100%);
-  padding: 12px;
-  border-radius: 40px;
+  width: min(460px, 100%);
+  padding: 18px;
+  border-radius: 36px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: linear-gradient(180deg, #191919, #060606);
+  background:
+    linear-gradient(180deg, rgba(24, 26, 24, 0.96), rgba(8, 9, 8, 0.98)),
+    #070707;
   box-shadow:
     0 34px 80px rgba(0, 0, 0, 0.52),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.phone-frame::before {
+.memory-stage::before {
   content: "";
   position: absolute;
-  top: 18px;
-  left: 50%;
-  width: 112px;
-  height: 26px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.9);
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-.phone-screen {
-  min-height: 568px;
-  padding: 18px;
-  border-radius: 29px;
+  inset: 18px;
+  border-radius: 26px;
   background:
-    radial-gradient(circle at 50% -5%, rgba(52, 178, 51, 0.18), transparent 28%),
-    linear-gradient(180deg, #1a1f1b, #0b0e0c 58%, #101410 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+    radial-gradient(circle at top right, rgba(52, 178, 51, 0.12), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 34%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
 }
 
-.phone-status {
+.memory-panel {
+  position: relative;
+  min-height: 520px;
+  padding: 26px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at top right, rgba(52, 178, 51, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(15, 18, 15, 0.94);
+  overflow: hidden;
+}
+
+.memory-panel::after {
+  content: "";
+  position: absolute;
+  right: -32px;
+  bottom: -42px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(52, 178, 51, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.memory-panel-kicker {
+  color: #93f58c;
+}
+
+.memory-statement {
+  display: grid;
+  gap: 2px;
+  margin-top: 18px;
+  color: #f6f7f2;
+  font-size: clamp(3.5rem, 8vw, 5.2rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.08em;
+}
+
+.memory-statement span:last-child {
+  color: #7df77c;
+}
+
+.memory-strips {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.memory-strip {
   display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  color: #d3d8d4;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  color: #edf0eb;
+  line-height: 1.45;
+}
+
+.memory-strip strong,
+.memory-strip p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+.memory-strip-muted {
+  color: #afb7b2;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.memory-strip-active {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  align-items: start;
+  background: linear-gradient(180deg, rgba(52, 178, 51, 0.18), rgba(255, 255, 255, 0.04));
+  border-color: rgba(125, 247, 124, 0.42);
+}
+
+.memory-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #34b233;
+  box-shadow: 0 0 0 8px rgba(52, 178, 51, 0.14);
+  flex: none;
+}
+
+.memory-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(8, 16, 8, 0.44);
+  border: 1px solid rgba(125, 247, 124, 0.34);
+  color: #cfffce;
   font-size: 0.74rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.phone-widget {
-  margin-top: 40px;
-  padding: 18px;
-  border-radius: 26px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
-    rgba(18, 20, 18, 0.92);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-.phone-label {
-  color: #93f58c;
-}
-
-.phone-note {
-  display: grid;
-  gap: 6px;
-  padding: 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.phone-note + .phone-note {
-  margin-top: 12px;
-}
-
-.phone-note-active {
-  background: linear-gradient(180deg, rgba(52, 178, 51, 0.24), rgba(255, 255, 255, 0.06));
-  border-color: rgba(125, 247, 124, 0.52);
-}
-
-.phone-note-time {
-  color: #adb4b0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.phone-note strong {
-  color: #f9faf7;
-  font-size: 1rem;
-  line-height: 1.34;
-  letter-spacing: -0.02em;
-}
-
-.phone-note p {
-  margin: 0;
-  color: #d6dbd7;
-  font-size: 0.9rem;
-  line-height: 1.54;
-}
-
-.phone-chip {
-  display: inline-flex;
-  margin-top: 18px;
-  padding: 9px 12px;
-  border-radius: 999px;
-  color: #dffdde;
-  background: rgba(52, 178, 51, 0.14);
-  border: 1px solid rgba(52, 178, 51, 0.34);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-.floating-card {
+.memory-float {
   position: absolute;
-  left: 0;
-  bottom: 15%;
+  right: -24px;
+  bottom: 32px;
   display: grid;
   gap: 4px;
-  max-width: 220px;
+  max-width: 230px;
   padding: 16px 18px;
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.62);
   background: rgba(239, 243, 240, 0.94);
   color: #0b100b;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
-  transform: translateX(-12%);
 }
 
-.floating-label {
+.memory-float-label {
   color: #228c2b;
 }
 
-.floating-card strong {
+.memory-float strong {
   font-size: 1.02rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
 }
 
-.floating-card span {
+.memory-float span {
   color: #4d5650;
   font-size: 0.9rem;
   line-height: 1.45;
@@ -809,11 +830,9 @@ body.landing-body::after {
     padding-top: 8px;
   }
 
-  .floating-card {
-    left: auto;
+  .memory-float {
     right: 8%;
     bottom: 5%;
-    transform: none;
   }
 
   .landing-grid {
@@ -859,20 +878,24 @@ body.landing-body::after {
     width: 100%;
   }
 
-  .phone-frame {
-    width: min(100%, 360px);
+  .memory-stage {
+    width: min(100%, 420px);
   }
 
-  .phone-screen {
-    min-height: 520px;
+  .memory-panel {
+    min-height: 0;
+    padding: 22px;
   }
 
-  .floating-card {
+  .memory-statement {
+    font-size: clamp(2.9rem, 15vw, 4.1rem);
+  }
+
+  .memory-float {
     position: relative;
     right: auto;
     bottom: auto;
     margin: 14px auto 0;
-    transform: none;
   }
 
   .landing-card {
