@@ -460,12 +460,14 @@ body.landing-body::after {
 
 .landing-title {
   margin: 28px 0 0;
-  max-width: 11ch;
+  max-width: 12.5ch;
   color: #ffffff;
   font-size: clamp(2.2rem, 4.5vw, 4.4rem);
   font-weight: 860;
   line-height: 1.04;
   letter-spacing: -0.055em;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .landing-lead {

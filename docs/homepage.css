@@ -296,6 +296,8 @@ body.landing-body::after {
   font-family: "Space Grotesk", "Pretendard Variable", sans-serif;
   font-size: clamp(3.3rem, 7.2vw, 6.2rem);
   line-height: 0.92;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .hero-title span {
