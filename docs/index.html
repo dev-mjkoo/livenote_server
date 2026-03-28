@@ -36,8 +36,7 @@
 
           <nav class="home-nav-links" aria-label="Section links">
             <a href="#overview">Overview</a>
-            <a href="#features">Features</a>
-            <a href="#flow">Flow</a>
+            <a href="#screens">Screens</a>
             <a href="#links">Links</a>
           </nav>
 
@@ -107,215 +106,38 @@
             </div>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
+          <div id="screens" class="hero-visual" aria-label="LiveNote app screenshots">
             <div class="hero-orb hero-orb-one"></div>
             <div class="hero-orb hero-orb-two"></div>
 
-            <div class="device-stage">
-              <div class="device-backplate"></div>
+            <div class="screen-showcase">
+              <span class="screen-badge screen-badge-dark">Dark</span>
+              <span class="screen-badge screen-badge-light">Light</span>
 
-              <div class="device-shell">
-                <div class="device-topline">
-                  <span>09:41</span>
-                  <span>Lock Screen Preview</span>
-                </div>
+              <figure class="screen-card screen-card-light">
+                <img
+                  src="./assets/livenote-light.png"
+                  alt="LiveNote light mode screenshot"
+                  decoding="async"
+                />
+              </figure>
 
-                <div class="island-chip">
-                  <span class="pulse-dot"></span>
-                  <span>Dynamic Island · 오늘 남은 일정 2개</span>
-                </div>
+              <figure class="screen-card screen-card-dark">
+                <img
+                  src="./assets/livenote-dark.png"
+                  alt="LiveNote dark mode screenshot"
+                  decoding="async"
+                />
+              </figure>
 
-                <div class="note-card note-card-primary">
-                  <p class="note-eyebrow">Pinned for today</p>
-                  <strong>3PM 회의 전에 링크 확인하고 초안 보내기</strong>
-                  <p>메모, 일정, 저장한 링크를 앱을 열기 전에 먼저 보여줍니다.</p>
-                </div>
-
-                <div class="todo-card">
-                  <div class="todo-row todo-row-complete">
-                    <span class="todo-dot">✓</span>
-                    <p>주간 일정 확인</p>
-                  </div>
-                  <div class="todo-row todo-row-complete">
-                    <span class="todo-dot">✓</span>
-                    <p>공유 링크 카테고리 정리</p>
-                  </div>
-                  <div class="todo-row">
-                    <span class="todo-dot"></span>
-                    <p>잠금화면 메모 한 줄 업데이트</p>
-                  </div>
-                </div>
-
-                <div class="mini-grid">
-                  <article class="mini-card">
-                    <span>Saved Link</span>
-                    <strong>Design inspo board</strong>
-                    <p>공유 시트에서 저장하고 나중에 바로 열기</p>
-                  </article>
-                  <article class="mini-card">
-                    <span>Weekly View</span>
-                    <strong>남은 시간까지 함께 표시</strong>
-                    <p>오늘과 이번 주의 흐름을 빠르게 다시 확인</p>
-                  </article>
-                </div>
-              </div>
-
-              <div class="floating-panel floating-panel-left">
-                <p class="floating-label">Shared link</p>
-                <strong>Safari에서 보던 링크를 바로 저장</strong>
-                <span>나중에 열어야 할 링크를 카테고리별로 묶어 둡니다.</span>
-              </div>
-
-              <div class="floating-panel floating-panel-right">
-                <p class="floating-label">Weekly glance</p>
-                <strong>이번 주 일정과 해야 할 일이 한눈에</strong>
-                <span>잠금화면과 위젯에서 빠르게 훑어보는 사용 흐름을 강조합니다.</span>
+              <div class="screen-summary">
+                <span>Dark / Light</span>
+                <strong>같은 구조를 그대로, 테마만 자연스럽게.</strong>
+                <p>메모, 링크, 일정 카드가 어느 화면에서도 익숙한 흐름으로 이어집니다.</p>
               </div>
             </div>
           </div>
         </section>
-      </section>
-
-      <section id="features" class="home-section">
-        <div class="section-heading">
-          <p class="section-kicker">WHAT CHANGES</p>
-          <h2 class="section-title">보이지 않던 기록을, 계속 보이는 인터페이스로 바꿉니다.</h2>
-          <p class="section-copy">
-            이번 홈은 설명 페이지보다 제품 감각을 먼저 전달하는 마이크로사이트에
-            가깝습니다. 큰 메시지, 입체적인 제품 프리뷰, 그리고 한 번에 이해되는
-            기능 그리드로 LiveNote의 방향을 더 또렷하게 잡았습니다.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card feature-card-spotlight">
-            <p class="card-kicker">01 / LOCK SCREEN FIRST</p>
-            <h3>기억은 가장 자주 보는 화면에 남겨둬야 합니다.</h3>
-            <p>
-              LiveNote는 복잡한 생산성 툴을 더하는 앱이 아니라, 중요한 것을 이미 자주
-              보는 화면 위로 올려 주는 앱입니다. 그래서 첫 화면도 설명보다 체감이 먼저
-              오도록 구성했습니다.
-            </p>
-
-            <div class="spotlight-grid">
-              <div>
-                <span>MEMO</span>
-                <strong>한 줄 메모</strong>
-              </div>
-              <div>
-                <span>TO-DO</span>
-                <strong>체크 가능한 할 일</strong>
-              </div>
-              <div>
-                <span>LINK</span>
-                <strong>저장한 링크 재오픈</strong>
-              </div>
-            </div>
-
-            <div class="feature-tags">
-              <span>Live Activities</span>
-              <span>Dynamic Island</span>
-              <span>Widgets</span>
-              <span>Always visible</span>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <p class="card-kicker">02 / MEMO + TO-DO</p>
-            <h3>한 줄 메모도, 체크리스트도 바로 고정</h3>
-            <p>기록은 빠르게, 확인은 더 빠르게. 앱을 켜기 전부터 해야 할 일이 보입니다.</p>
-            <div class="micro-list">
-              <span>빠른 입력</span>
-              <span>체크박스</span>
-              <span>즉시 반영</span>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <p class="card-kicker">03 / SAVE LINKS</p>
-            <h3>나중에 읽을 링크도 바로 묶어서 저장</h3>
-            <p>공유 시트에서 저장하고, 카테고리별로 정리한 뒤 필요한 순간에 바로 엽니다.</p>
-            <div class="micro-list">
-              <span>Share sheet</span>
-              <span>카테고리</span>
-              <span>썸네일 미리보기</span>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <p class="card-kicker">04 / WEEKLY VIEW</p>
-            <h3>오늘뿐 아니라 이번 주 흐름까지 짧게 확인</h3>
-            <p>남은 시간과 함께 보여 주는 일정 뷰로, 기억해야 할 타이밍을 더 선명하게 만듭니다.</p>
-            <div class="micro-list">
-              <span>주간 일정</span>
-              <span>남은 시간</span>
-              <span>빠른 훑어보기</span>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <p class="card-kicker">05 / LOW FRICTION</p>
-            <h3>복잡한 설명 없이도 바로 감이 오게</h3>
-            <p>히어로, 벤토 그리드, 링크 카드까지 모두 한 흐름으로 이어서 제품의 성격을 짧게 이해하게 합니다.</p>
-            <div class="micro-list">
-              <span>강한 첫인상</span>
-              <span>짧은 읽기 흐름</span>
-              <span>명확한 CTA</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="flow" class="home-section flow-section">
-        <div class="flow-layout">
-          <div class="flow-main">
-            <div class="section-heading">
-              <p class="section-kicker">HOW IT FLOWS</p>
-              <h2 class="section-title">기록하고, 고정하고, 화면을 켜는 순간 다시 확인합니다.</h2>
-              <p class="section-copy">
-                LiveNote의 핵심 경험은 복잡하지 않습니다. 생각을 남기고, 가장 먼저 보이는
-                곳에 두고, 필요한 순간 다시 확인하는 흐름을 끊김 없이 만드는 데 집중합니다.
-              </p>
-            </div>
-
-            <div class="flow-grid">
-              <article class="flow-step">
-                <span class="flow-number">01</span>
-                <h3>기록</h3>
-                <p>메모, 투두, 링크를 그 순간 바로 저장합니다.</p>
-              </article>
-
-              <article class="flow-step">
-                <span class="flow-number">02</span>
-                <h3>고정</h3>
-                <p>잠금화면과 Dynamic Island에 띄워 잊히지 않게 둡니다.</p>
-              </article>
-
-              <article class="flow-step">
-                <span class="flow-number">03</span>
-                <h3>확인</h3>
-                <p>앱을 열기 전, 화면을 켜는 짧은 순간에 다시 봅니다.</p>
-              </article>
-            </div>
-          </div>
-
-          <aside class="story-panel">
-            <p class="card-kicker">MADE FOR THESE MOMENTS</p>
-            <h3 class="story-title">잊기 전에 다시 봐야 하는 아주 짧은 순간들</h3>
-
-            <ul class="story-list">
-              <li>회의 직전에 꼭 다시 봐야 하는 메모</li>
-              <li>나중에 읽으려고 저장해 둔 링크</li>
-              <li>외출 전에 체크해야 하는 할 일</li>
-              <li>이번 주 안에 처리해야 하는 작은 일정</li>
-            </ul>
-
-            <div class="story-quote">
-              <strong>앱을 여는 순간보다, 화면을 켜는 순간에 더 가까운 메모 앱.</strong>
-              <p>LiveNote 홈의 새 방향도 그 경험을 그대로 닮게 만들었습니다.</p>
-            </div>
-          </aside>
-        </div>
       </section>
 
       <section id="links" class="bottom-grid">
