@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "sync:screenshot-studio": "node scripts/sync-screenshot-studio.mjs"
   },
   "dependencies": {
     "express": "^4.19.2"

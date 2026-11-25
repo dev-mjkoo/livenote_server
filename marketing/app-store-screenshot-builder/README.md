@@ -12,6 +12,13 @@ python3 -m http.server 8787 --directory marketing/app-store-screenshot-builder
 
 브라우저에서 `http://localhost:8787`을 엽니다.
 
+이 폴더가 원본 소스입니다. 수정 후 배포 경로인 `docs/screenshot-studio`와
+로컬 서버 경로인 `public/screenshot-studio`에 반영하려면 다음을 실행합니다.
+
+```bash
+npm run sync:screenshot-studio
+```
+
 ## 기능
 
 - 최대 10개 아트보드 추가·복제·삭제·순서 변경
@@ -19,7 +26,8 @@ python3 -m http.server 8787 --directory marketing/app-store-screenshot-builder
 - 추가한 언어 행 삭제
 - 화면 추가·복제·순서 변경·삭제를 모든 언어 행에 동일하게 반영
 - 선택한 화면의 모든 언어 문구를 한 패널에서 빠르게 입력
-- 한국어 화면을 기준으로 템플릿·목업·폰트·위치·배경·이미지 설정을 모든 언어에 자동 동기화
+- 한국어 화면을 기준으로 템플릿·목업·폰트·위치·배경 설정을 모든 언어에 자동 동기화
+- 앱 화면 이미지는 언어별로 각각 업로드하고 독립적으로 유지
 - 시그니처 블루·미니멀 페이퍼·블랙 에디토리얼·오로라 등 완성형 디자인 템플릿 12종
 - 각 아트보드에 PNG·JPG 앱 화면 업로드 또는 드래그 앤 드롭
 - 내장 Pretendard Variable 글꼴과 100~900 문구 굵기 설정
@@ -36,5 +44,6 @@ python3 -m http.server 8787 --directory marketing/app-store-screenshot-builder
 - 4가지 App Store 출력 규격
 - 개별 PNG 또는 전체 PNG 저장
 - 현재 프로젝트와 업로드 이미지를 브라우저 데이터베이스에 자동 저장
+- 프로젝트 전체를 JSON 파일로 백업하고 다시 불러오기
 
 초기 상태에는 LiveNote 화면 5장이 예시로 들어 있습니다. 이미지를 교체하면 다음 업데이트나 다른 앱에도 같은 템플릿을 재사용할 수 있습니다.
